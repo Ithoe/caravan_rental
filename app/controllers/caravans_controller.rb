@@ -10,10 +10,12 @@ class CaravansController < ApplicationController
 
   def new
     @caravan = Caravan.new
+    authorize @caravan
   end
 
   def create
     @caravan = Caravan.new(caravans_params)
+    authorize @caravan
     if @caravan.save
       redirect_to caravan_path(@caravan)
     else
