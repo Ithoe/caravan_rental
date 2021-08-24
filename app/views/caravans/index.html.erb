@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="cards">
+    <% @caravans.each do |caravan| %>
+      <div class="card-caravan">
+        <img src="https://picsum.photos/300/200" alt="caravan image" style="object-fit: cover; object-position: top; height: 200; crop: fill" />
+        <div class="card-caravan-infos">
+          <div>
+            <h2><%= caravan.name %></h2>
+            <p><%= caravan.description %></p>
+          </div>
+          <div>
+            <h2 class="card-caravan-pricing">€ <%= caravan.daily_rate %></h2>
+            <a href="/caravans/<%= "#{caravan.id}"%>" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
