@@ -28,7 +28,7 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -41,4 +41,8 @@
 
 .card-caravan-pricing a {
   color:red;
+}
+
+.card-caravan .title-description {
+  width: 75%;
 }
