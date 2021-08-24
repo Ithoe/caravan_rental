@@ -1,15 +1,25 @@
 .footer{
   background-color: rgb(110, 231, 201);
   background-size: cover;
-  height: 200px;
+  height: 150px;
   padding: 15px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.footer-left a{
+.footer-top{
+  display:flex;
+  justify-content: space-between;
+
+}
+
+.footer-top a{
   color: white;
   font-size: 15px;
   margin: 5px;
+
 }
 
 .fab{
@@ -18,14 +28,12 @@
   margin: 5px
 }
 
-.fixed-bottom {
-  position: fixed;
+.footer-bottom {
   bottom: 0;
-  padding: 15px;
-  z-index: 1030;
   font-size: 12px;
+  margin-left: 5px;
 }
 
-.fixed-bottom p{
-  margin: 5px;
+.footer-bottom p{
+  margin:0;
 }
