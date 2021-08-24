@@ -7,3 +7,16 @@
 @import "card_category";
 @import "cards";
 @import "card-caravan";
+
+#indexcards {
+  display: grid;
+  justify-content: flex-end;
+}
+
+.sidenav {
+
+}
+
+.container {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
