@@ -1,3 +1,31 @@
 .footer{
-  background-color: black;
+  background-color: rgb(110, 231, 201);
+  background-size: cover;
+  height: 200px;
+  padding: 15px;
+  color: white;
+}
+
+.footer-left a{
+  color: white;
+  font-size: 15px;
+  margin: 5px;
+}
+
+.fab{
+  color: white;
+  font-size: 20px;
+  margin: 5px
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  padding: 15px;
+  z-index: 1030;
+  font-size: 12px;
+}
+
+.fixed-bottom p{
+  margin: 5px;
 }
