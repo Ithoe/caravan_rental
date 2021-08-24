@@ -25,9 +25,8 @@
           </div>
           <div>
             <h2 class="card-caravan-pricing">€ <%= caravan.daily_rate %></h2>
-            <p><strong><%= link_to "Delete", caravan_path(caravan), method: :delete, data: { confirm: "Are you sure?" } %></strong></p>
+            <a href="/caravans/<%= "#{caravan.id}"%>" class="stretched-link"></a>
           </div>
-          <a href="/caravans/<%= "#{caravan.id}"%>" class="stretched-link"></a>
         </div>
       </div>
     <% end %>
@@ -48,8 +47,8 @@
           <div>
             <h2 class="card-caravan-pricing">€ <%= caravan.daily_rate %></h2>
             <p><strong><%= link_to "Delete", caravan_path(caravan), method: :delete, data: { confirm: "Are you sure?" } %></strong></p>
+            <a href="/caravans/<%= "#{caravan.id}"%>" class="stretched-link"></a>
           </div>
-          <a href="/caravans/<%= "#{caravan.id}"%>" class="stretched-link"></a>
         </div>
       </div>
     <% end %>
