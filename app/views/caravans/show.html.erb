@@ -1,0 +1,13 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url(https://picsum.photos/300/200); height: 300px; ">
+  <div class="container">
+    <h1> <%= @caravan.name %> </h1>
+  </div>
+</div>
+
+
+
+<div class="container my-5">
+  <h4> <%= @caravan.description %> </h4>
+  <p>Built year: <%= @caravan.built_year %></p>
+  <p>Daily rate: € <%= @caravan.daily_rate %></p>
+</div>
