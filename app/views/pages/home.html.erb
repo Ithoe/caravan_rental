@@ -1,53 +1,61 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1619317190381-643a6b28d6e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80); height: 500px;";>
   <div class="container">
-    <h1>Rent your caravan today!</h1>
-    <p>And enjoy your holiday with maximum freedom.</p>
-  </div>
-</div>
-
-<div class="container my-5">
-  <h3>What are you looking for?</h3>
-  <div class="row d-flex justify-content-start">
-    <div class="col-md-4">
-      <div class="card">
-        <article class="filter-group">
-          <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside2" data-abc="true" aria-expanded="false" class="collapsed"> <i class="icon-control fa fa-chevron-down"></i>
-            <h6 class="title">Daily rate</h6>
-          </a> </header>
-          <div class="filter-content collapse" id="collapse_aside2" style="">
-              <div class="card-body">
-                <div class="form-row">
-                  <div class="form-group col-md-6"> <label>Min</label> <input class="form-control" placeholder="€ 0" type="number"> </div>
-                  <div class="form-group text-right col-md-6"> <label>Max</label> <input class="form-control" placeholder="€ 1000" type="number"> </div>
-                </div> <a href="#" class="highlight-button btn btn-medium button xs-margin-bottom-five" data-abc="true">Toepassen</a>
+    <div class="container-text">
+      <h1>Rent your caravan today!</h1>
+      <p>And enjoy your holiday with maximum freedom.</p>
+    </div>
+    <div class="container-filter">
+      <div class="container my-5">
+        <h3>What are you looking for?</h3>
+        <div class="row d-flex justify-content-start">
+          <div class="col-md-4">
+            <div class="card">
+              <article class="filter-group">
+                <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside2" data-abc="true" aria-expanded="false" class="collapsed"> <i class="icon-control fa fa-chevron-down"></i>
+                  <h6 class="title">Daily rate</h6>
+                </a> </header>
+                <div class="filter-content collapse" id="collapse_aside2" style="">
+                    <div class="card-body">
+                      <div class="form-row">
+                        <div class="form-group col-md-6"> <label>Min</label> <input class="form-control" placeholder="€ 0" type="number"> </div>
+                        <div class="form-group text-right col-md-6"> <label>Max</label> <input class="form-control" placeholder="€ 1000" type="number"> </div>
+                      </div> <a href="#" class="highlight-button btn btn-medium button xs-margin-bottom-five" data-abc="true">Toepassen</a>
+                    </div>
+                </div>
+            </article>
+            <article class="filter-group">
+              <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside3" data-abc="true" aria-expanded="false" class="collapsed"> <i class="icon-control fa fa-chevron-down"></i>
+                <h6 class="title">Brand</h6>
+                </a> </header>
+                  <div class="filter-content collapse" id="collapse_aside3" style="">
+                  <div class="card-body"> <label class="checkbox-btn"> <input type="checkbox"> <span class="btn btn-light"> Airstream </span> </label> <label class="checkbox-btn"> <input type="checkbox"> <span class="btn btn-light"> Kip </span> </label> </div>
               </div>
+            </article>
+            <article class="filter-group">
+              <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside4" data-abc="true" class="collapsed" aria-expanded="false"> <i class="icon-control fa fa-chevron-down"></i>
+                <h6 class="title">Brand alternative </h6>
+                </a> </header>
+                <div class="filter-content collapse" id="collapse_aside4" style="">
+                  <div class="card-body"> <label class="custom-control"> <input type="checkbox" checked="" class="custom-control-input">
+                  <div class="custom-control-label">Airstream</div>
+                  </label> <label class="custom-control"> <input type="checkbox" checked="" class="custom-control-input">
+                  <div class="custom-control-label">Kip</div>
+                  </label> </div>
+              </div>
+            </article>
+            </div>
           </div>
-      </article>
-      <article class="filter-group">
-        <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside3" data-abc="true" aria-expanded="false" class="collapsed"> <i class="icon-control fa fa-chevron-down"></i>
-          <h6 class="title">Brand</h6>
-          </a> </header>
-            <div class="filter-content collapse" id="collapse_aside3" style="">
-            <div class="card-body"> <label class="checkbox-btn"> <input type="checkbox"> <span class="btn btn-light"> Airstream </span> </label> <label class="checkbox-btn"> <input type="checkbox"> <span class="btn btn-light"> Kip </span> </label> </div>
         </div>
-      </article>
-      <article class="filter-group">
-        <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside4" data-abc="true" class="collapsed" aria-expanded="false"> <i class="icon-control fa fa-chevron-down"></i>
-          <h6 class="title">Brand alternative </h6>
-          </a> </header>
-          <div class="filter-content collapse" id="collapse_aside4" style="">
-            <div class="card-body"> <label class="custom-control"> <input type="checkbox" checked="" class="custom-control-input">
-            <div class="custom-control-label">Airstream</div>
-            </label> <label class="custom-control"> <input type="checkbox" checked="" class="custom-control-input">
-            <div class="custom-control-label">Kip</div>
-            </label> </div>
-        </div>
-      </article>
-      </div>
+  </div>
     </div>
   </div>
 </div>
 
+<div class="container my-5">
+  <button type="button" class="btn btn-success">
+    <%= link_to "Add your caravan for rent", new_caravan_path %>
+  </button>
+</div>
 
 <div class="container">
   <h3>Rent one of these caravans today</h3>
@@ -57,7 +65,9 @@
   <div class="cards">
     <% @caravans.sample(3).each do |caravan| %>
       <div class="card-caravan">
+      <% if caravan.photos.attached? %>
         <%= cl_image_tag caravan.photos.first.key %>
+        <% end %>
         <div class="card-caravan-infos">
           <div class="title-description">
             <h2><%= caravan.name %></h2>
@@ -74,7 +84,7 @@
 </div>
 
 <div class="container my-5">
-  <button type="button" class="btn btn-dark">
+  <button type="button" class="btn btn-success">
     <%= link_to "See all available caravans", caravans_path %>
   </button>
 </div>
