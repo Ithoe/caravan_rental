@@ -2,22 +2,22 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
+  <div class="form-inputs col-6">
     <%= f.input :name %>
   </div>
-  <div class="form-inputs">
+  <div class="form-inputs col-6">
     <%= f.input :description %>
   </div>
-  <div class="form-inputs">
+  <div class="form-inputs col-6">
     <%= f.input :built_year %>
   </div>
-  <div class="form-inputs">
+  <div class="form-inputs col-6">
     <%= f.input :brand %>
   </div>
-  <div class="form-inputs">
+  <div class="form-inputs col-6">
     <%= f.input :daily_rate %>
   </div>
-  <div class="form-actions">
+  <div class="form-actions col-3">
     <%= f.button :submit %>
   </div>
 <% end %>
