@@ -16,6 +16,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 
   def create
     @caravan = Caravan.new(caravans_params)
+    @user = current_user
+    @caravan.user_id = @user.id
     authorize @caravan
     if @caravan.save
       redirect_to caravan_path(@caravan)
