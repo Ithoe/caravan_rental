@@ -29,6 +29,6 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   private
 
   def caravans_params
-    params.require(:caravan).permit(:name, :description, :built_year, :brand, :daily_rate)
+    params.require(:caravan).permit(:name, :description, :built_year, :brand, :daily_rate, photos: [])
   end
 end
