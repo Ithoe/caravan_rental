@@ -6,6 +6,7 @@ class CaravansController < ApplicationController
 
   def show
     @caravan = Caravan.find(params[:id])
+    authroize @caravan
   end
 
   def new
