@@ -109,7 +109,7 @@
      display: inline-block;
      margin-right: 20px;
      letter-spacing: 2px;
-     border: 1px solid #157af6;
+     border: 1px solid white;
      width: 100%
  }
 
@@ -124,4 +124,20 @@
      display: block;
      min-height: 1.5rem;
      padding-left: 1.5rem
+ }
+
+
+ .banner{
+   display:flex;
+   flex-direction: column;
+ }
+ .container{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   padding: 30px
+ }
+
+ .container h3{
+   color:#989898;
  }
