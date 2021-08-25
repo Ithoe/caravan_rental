@@ -1,26 +1,28 @@
-<%= simple_form_for(@caravan) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="container my-5">
+  <%= simple_form_for(@caravan) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs col-8">
-    <%= f.input :name %>
-  </div>
-  <div class="form-inputs col-8">
-    <%= f.input :description %>
-  </div>
-  <div class="form-inputs col-8">
-    <%= f.input :built_year %>
-  </div>
-  <div class="form-inputs col-8">
-    <%= f.input :brand %>
-  </div>
-  <div class="form-inputs col-8">
-    <%= f.input :daily_rate %>
-  </div>
-  <div class="form-inputs-photos">
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  </div>
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-inputs col-8">
+      <%= f.input :name %>
+    </div>
+    <div class="form-inputs col-8">
+      <%= f.input :description %>
+    </div>
+    <div class="form-inputs col-8">
+      <%= f.input :built_year %>
+    </div>
+    <div class="form-inputs col-8">
+      <%= f.input :brand %>
+    </div>
+    <div class="form-inputs col-8">
+      <%= f.input :daily_rate %>
+    </div>
+    <div class="form-inputs-photos">
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>
