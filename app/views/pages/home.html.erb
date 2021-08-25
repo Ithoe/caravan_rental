@@ -57,7 +57,7 @@
   <div class="cards">
     <% @caravans.sample(3).each do |caravan| %>
       <div class="card-caravan">
-        <img src="https://picsum.photos/300/200" alt="caravan image" style="object-fit: cover; object-position: top; height: 200; crop: fill" />
+        <%= cl_image_tag caravan.photos.first.key %>
         <div class="card-caravan-infos">
           <div class="title-description">
             <h2><%= caravan.name %></h2>
