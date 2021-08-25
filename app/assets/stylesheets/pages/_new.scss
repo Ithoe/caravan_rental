@@ -1,3 +1,14 @@
-.btn{
+#new_caravan{
+  padding: 15px;
+}
+.form-actions .btn{
   background-color: $base-color;
+  font-family: $headers-font;
+  margin: 5px 15px;
+  color: white;
+  border-radius: 4px;
+}
+
+.form-inputs-photos{
+  padding: 5px 15px;
 }
