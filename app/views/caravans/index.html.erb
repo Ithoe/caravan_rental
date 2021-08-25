@@ -2,9 +2,11 @@
   <div class="cards">
     <% @caravans.each do |caravan| %>
       <div class="card-caravan">
-        <%= cl_image_tag caravan.photos.first.key %>
+        <% if caravan.photos.attached? %>
+          <%= cl_image_tag caravan.photos.first.key %>
+        <% end %>
         <div class="card-caravan-infos">
-          <div>
+          <div class="title-description">
             <h2><%= caravan.name %></h2>
             <p><%= caravan.description %></p>
           </div>
