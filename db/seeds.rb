@@ -15,22 +15,22 @@ puts "Users added..."
 
 puts "Adding caravans..."
 file = URI.open('https://autoline.nl/img/s/caravanAIRSTREAM-604-Yukon---1617016059469960412_common--20051316414417917500.jpg')
-caravan01 = Caravan.new(name: "Super caravan", description: "Best caravan in the world and for a very good price", built_year: 1984, brand: "Airstream", daily_rate: 20, user_id: a.id)
+caravan01 = Caravan.new(name: "Super caravan", description: "Best caravan in the world and for a very good price", built_year: 1984, brand: "Airstream", daily_rate: 20.00, user_id: a.id)
 caravan01.photos.attach(io: file, filename: 'airstream1.jpg', content_type: 'image/jpg')
 caravan01.save
 
 file = URI.open('https://autoline.nl/img/s/caravanAIRSTREAM-604-Yukon---1617016063515592747_big--20051316414417917500.jpg')
-caravan02 = Caravan.new(name: "Old caravan", description: "A real classic", built_year: 1962, brand: "Airstream", daily_rate: 50, user_id: b.id)
+caravan02 = Caravan.new(name: "Old caravan", description: "A real classic", built_year: 1962, brand: "Airstream", daily_rate: 50.00, user_id: b.id)
 caravan02.photos.attach(io: file, filename: 'airstream2.jpg', content_type: 'image/jpg')
 caravan02.save
 
 file = URI.open('https://www.dejongrecreatie.nl/media-resize/af9052e1a7823b59c2738304442ec668/csm_zoom-image-homepage_961e9437a7.jpg')
-caravan03 = Caravan.new(name: "Modern caravan", description: "A new caravan", built_year: 2020, brand: "Kip", daily_rate: 80, user_id: c.id)
+caravan03 = Caravan.new(name: "Modern caravan", description: "A new caravan", built_year: 2020, brand: "Kip", daily_rate: 80.00, user_id: c.id)
 caravan03.photos.attach(io: file, filename: 'kip1.jpg', content_type: 'image/jpg')
 caravan03.save
 
 file = URI.open('https://www.dejongrecreatie.nl/media-resize/53217453e051dae8dcb470f97ea60697/hobby-de-luxe-1.jpg')
-caravan04 = Caravan.new(name: "Big caravan", description: "For family", built_year: 2015, brand: "Kip", daily_rate: 120, user_id: c.id)
+caravan04 = Caravan.new(name: "Big caravan", description: "For family", built_year: 2015, brand: "Kip", daily_rate: 120.00, user_id: c.id)
 caravan04.photos.attach(io: file, filename: 'kip2.jpg', content_type: 'image/jpg')
 caravan04.save
 

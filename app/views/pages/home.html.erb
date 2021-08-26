@@ -48,7 +48,7 @@
             <p><%= caravan.description %></p>
           </div>
           <div>
-            <h2 class="card-caravan-pricing">€ <%= caravan.daily_rate %></h2>
+            <h2 class="card-caravan-pricing">€ <%= number_with_precision(caravan.daily_rate, precision: 2) %></h2>
             <a href="/caravans/<%= "#{caravan.id}"%>" class="stretched-link"></a>
           </div>
         </div>
