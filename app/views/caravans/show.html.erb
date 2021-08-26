@@ -1,18 +1,40 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url('<%= cl_image_path @caravan.photos.first.key, height: 300, crop: :fill %>')">
+<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url('<%= cl_image_path @caravan.photos.first.key, height: 300, crop: :fill %>')">
   <div class="container">
     <h1> <%= @caravan.name %> </h1>
   </div>
 </div>
+-->
 
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <% @caravan.photos.each do |photo| %>
+      <% if photo == @caravan.photos.first %>
+        <div class="carousel-item active d-flex justify-content-center">
+          <%= cl_image_tag photo.key, class: "d-block image-carousel" %>
+        </div>
+      <% else %>
+        <div class="carousel-item d-flex justify-content-center">
+          <%= cl_image_tag photo.key, class: "d-block image-carousel" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 
 <div class="container my-5">
+  <h1> <%= @caravan.name %> </h1>
   <h4> <%= @caravan.description %> </h4>
   <p>Built year: <%= @caravan.built_year %></p>
   <p>Daily rate: € <%= @caravan.daily_rate %></p>
-
-
-  <% @caravan.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
 </div>
