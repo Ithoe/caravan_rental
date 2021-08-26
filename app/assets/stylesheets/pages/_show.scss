@@ -1,0 +1,30 @@
+.form-box {
+  display:flex;
+  justify-content: space-between;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 30px 0px;
+}
+
+.show-form {
+  display:flex;
+  flex-direction: column;
+  padding: 30px 0px;
+}
+
+.description-box{
+  width: 80%;
+}
+
+.booking-box{
+  width: 30%;
+
+}
+
+// *{
+//   border: solid 1px;
+// }
+
+.carousel-control-next, .carousel-control-prev {
+  filter: invert(100%);
+}
