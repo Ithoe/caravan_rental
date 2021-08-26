@@ -40,3 +40,22 @@
 
   <h3 class="btn"><%= link_to "See all caravans", caravans_path %></h3>
 </div>
+
+
+<%= simple_form_for [@caravan, @booking] do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs col-8">
+      <%= f.input :start_date %>
+    </div>
+    <div class="form-inputs col-8">
+      <%= f.input :end_date %>
+    </div>
+    <div class="form-inputs col-8">
+      <%= f.input :comment %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>
