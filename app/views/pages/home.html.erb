@@ -1,7 +1,8 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1619317190381-643a6b28d6e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80); height: 500px;";>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1619317190381-643a6b28d6e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80); height: 500px; width:vw;">
   <div class="container">
     <h1>Rent your caravan today!</h1>
     <p>And enjoy your holiday with maximum freedom</p>
+
     <div class= "main-form">
       <br>
       <br>
@@ -21,14 +22,14 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
 </div>
 
-<div class="state-box">
-  <h3>Rent one of these caravans today</h3>
-  <button type="button" class="btn-colored">
-      <%= link_to "SEE ALL AVAILABLE CARAVANS", caravans_path %>
-  </button>
+<div class="container">
+  <div class="statement-box">
+    <h3>Rent one of these caravans today</h3>
+    <%= link_to "SEE ALL AVAILABLE CARAVANS", caravans_path, class: "btn-colored" %>
+  </div>
 </div>
 
 <div class="container">
@@ -53,12 +54,14 @@
   </div>
 </div>
 
-<div class="container">
-  <h3>Have a caravan sitting in your backyard?</h3>
-</div>
+
 
 <div class="container">
-  <button type="button" class="btn-colored">
-    <%= link_to "ADD YOUR CARAVAN TODAY", new_caravan_path %>
-  </button>
+  <div class="statement-box">
+    <div class="box-layout">
+      <h3>Have a caravan sitting in your backyard?</h3>
+      <%= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." %>
+      <%= link_to "ADD YOUR CARAVAN TODAY", new_caravan_path, class:"btn-colored" %>
+    </div>
+  </div>
 </div>

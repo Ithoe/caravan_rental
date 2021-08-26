@@ -130,13 +130,22 @@
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
-   padding: 20px 30px 20px 30px;
+   padding: 50px 30px;
  }
 
- .state-box{
+ .container > .statement-box{
    display: flex;
    justify-content: space-between;
+   align-items: center;
  }
+
+ .statement-box > .box-layout{
+   display:flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+
  .container h3{
    color:#989898;
  }
@@ -156,14 +165,25 @@
   font-weight: 400;
 }
 
+// *{
+//   border: solid 1px
+// }
 
 .btn-colored{
-  width:100%;
-  padding: 30px;
+  width: 250px;
+  padding: 50px 0px;
   border-radius: 4px;
-  background-color: lightgrey;
+  background-color: $base-color;
   border: none;
   color: white;
-  padding: 100px;
-  // margin: 50px 40px 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-colored:hover{
+  background-color: white;
+  border: solid 2px $base-color;
+  color: $base-color;
+  text-decoration: none;
 }
