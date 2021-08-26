@@ -1,7 +1,11 @@
 class CaravansController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @caravans = policy_scope(Caravan)
+    if params[:query].present?
+      @caravans = policy_scope(Caravan.where(name: params[:query]))
+    else
+      @caravans = policy_scope(Caravan)
+    end
   end
 
   def show
