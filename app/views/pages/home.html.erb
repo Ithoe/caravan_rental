@@ -6,20 +6,20 @@
     <div class= "main-form">
       <br>
       <br>
-      <div class="title">Find your holiday ride</div>
+      <div class="title">FIND YOUR HOLIDAY RIDE</div>
       <div class="inner-form">
-        <div class="input-field first-wrap">
+        <%# <div class="input-field first-wrap"> %>
           <input id="search" type="text" placeholder="what are you looking for?">
-        </div>
-        <div class="input-field second-wrap">
+        <%# </div> %>
+        <%# <div class="input-field second-wrap"> %>
           <input class="datepicker" id="depart" type="text" placeholder="departure date">
-        </div>
-        <div class="input-field third-wrap">
+        <%# </div> %>
+        <%# <div class="input-field third-wrap"> %>
           <input class="datepicker" id="return" type="text" placeholder="return date">
-        </div>
-        <div class="input-field fifth-wrap">
+        <%# </div> %>
+        <%# <div class="input-field fifth-wrap"> %>
           <button class="btn-search" type="button">Search</button>
-        </div>
+        <%# </div> %>
       </div>
     </div>
     </div>
@@ -27,7 +27,10 @@
 
 <div class="container">
   <div class="statement-box">
-    <h3>Rent one of these caravans today</h3>
+    <div class="box-layout">
+      <h3>Rent one of these caravans today</h3>
+      <%= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." %>
+    </div>
     <%= link_to "SEE ALL AVAILABLE CARAVANS", caravans_path, class: "btn-colored" %>
   </div>
 </div>
@@ -54,14 +57,12 @@
   </div>
 </div>
 
-
-
 <div class="container">
   <div class="statement-box">
     <div class="box-layout">
       <h3>Have a caravan sitting in your backyard?</h3>
-      <%= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." %>
-      <%= link_to "ADD YOUR CARAVAN TODAY", new_caravan_path, class:"btn-colored" %>
+      <%= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." %>
     </div>
+    <%= link_to "ADD YOUR CARAVAN TODAY", new_caravan_path, class:"btn-colored" %>
   </div>
 </div>

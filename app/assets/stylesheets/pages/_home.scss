@@ -133,16 +133,18 @@
    padding: 50px 30px;
  }
 
- .container > .statement-box{
+ .statement-box{
    display: flex;
    justify-content: space-between;
    align-items: center;
  }
 
- .statement-box > .box-layout{
+  .box-layout{
    display:flex;
    flex-direction: column;
    justify-content: space-between;
+   position: relative;
+   width: 60%;
  }
 
 
@@ -157,17 +159,17 @@
 
 .inner-form{
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   border:0;
-  width:calc(100%-1px);
+  width: 60vw;
   padding: 10px 20px 10px 0px;
   font-size: 16px;
   font-weight: 400;
 }
 
-// *{
-//   border: solid 1px
-// }
+*{
+  border: solid 1px
+}
 
 .btn-colored{
   width: 250px;
