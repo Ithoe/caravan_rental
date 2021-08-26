@@ -186,6 +186,13 @@ input {
   border:none;
 }
 
+.btn-search:hover{
+  background-color: transparent;
+  border: solid 2px $base-color;
+  color: $base-color;
+  text-decoration: none;
+}
+
 #search {
   flex: 1 1 auto;
 }
