@@ -1,53 +1,10 @@
-
 <div class="container">
-  <div class="container my-5">
-    <h4>What are you looking for?</h4>
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-4">
-        <div class="card">
-          <article class="filter-group">
-            <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside2" data-abc="true" aria-expanded="false" class="collapsed"> <i class="icon-control fa fa-chevron-down"></i>
-              <h6 class="title">Daily rate</h6>
-            </a> </header>
-            <div class="filter-content collapse" id="collapse_aside2" style="">
-                <div class="card-body">
-                  <div class="form-row">
-                    <div class="form-group col-md-6"> <label>Min</label> <input class="form-control" placeholder="€ 0" type="number"> </div>
-                    <div class="form-group text-right col-md-6"> <label>Max</label> <input class="form-control" placeholder="€ 1000" type="number"> </div>
-                  </div> <a href="#" class="highlight-button btn btn-medium button xs-margin-bottom-five" data-abc="true">Toepassen</a>
-                </div>
-            </div>
-        </article>
-        <article class="filter-group">
-          <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside3" data-abc="true" aria-expanded="false" class="collapsed"> <i class="icon-control fa fa-chevron-down"></i>
-            <h6 class="title">Brand</h6>
-            </a> </header>
-              <div class="filter-content collapse" id="collapse_aside3" style="">
-              <div class="card-body"> <label class="checkbox-btn"> <input type="checkbox"> <span class="btn btn-light"> Airstream </span> </label> <label class="checkbox-btn"> <input type="checkbox"> <span class="btn btn-light"> Kip </span> </label> </div>
-          </div>
-        </article>
-        <article class="filter-group">
-          <header class="card-header"> <a href="#" data-toggle="collapse" data-target="#collapse_aside4" data-abc="true" class="collapsed" aria-expanded="false"> <i class="icon-control fa fa-chevron-down"></i>
-            <h6 class="title">Brand alternative </h6>
-            </a> </header>
-            <div class="filter-content collapse" id="collapse_aside4" style="">
-              <div class="card-body"> <label class="custom-control"> <input type="checkbox" checked="" class="custom-control-input">
-              <div class="custom-control-label">Airstream</div>
-              </label> <label class="custom-control"> <input type="checkbox" checked="" class="custom-control-input">
-              <div class="custom-control-label">Kip</div>
-              </label> </div>
-          </div>
-        </article>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="cards", id=indexcards>
-
   <div class="cards">
     <% @caravans.each do |caravan| %>
       <div class="card-caravan">
-        <img src="https://picsum.photos/300/200" alt="caravan image" style="object-fit: cover; object-position: top; height: 200; crop: fill" />
+        <% if caravan.photos.attached? %>
+          <%= cl_image_tag caravan.photos.first.key %>
+        <% end %>
         <div class="card-caravan-infos">
           <div class="title-description">
             <h2><%= caravan.name %></h2>
@@ -60,33 +17,4 @@
       </div>
     <% end %>
   </div>
-  </div>
-      <nav aria-label="Page navigation">
-      <ul class="pagination row d-flex justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Next</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <%= form_tag caravans_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a caravan"
-    %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-
 </div>
