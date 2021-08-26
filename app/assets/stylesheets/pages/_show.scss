@@ -14,16 +14,18 @@
 
 .description-box{
   width: 80%;
+  padding: 20px;
 }
 
 .booking-box{
   width: 30%;
-
+  padding: 20px;
+  background-color: $highlight-color;
 }
 
-// *{
-//   border: solid 1px;
-// }
+*{
+  border: solid 1px;
+}
 
 .carousel-control-next, .carousel-control-prev {
   filter: invert(100%);
