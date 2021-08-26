@@ -159,17 +159,44 @@
 
 .inner-form{
   display: flex;
-  justify-content: space-between;
   border:0;
   width: 60vw;
-  padding: 10px 20px 10px 0px;
   font-size: 16px;
   font-weight: 400;
 }
 
-*{
-  border: solid 1px
+
+input {
+  padding: 8px;
+  margin: 0 4px 0 0;
+  border-radius: 4px;
+  height: 40px;
+  border:none;
 }
+
+.btn-search {
+  flex: 0 1 auto;
+  padding: 0px 16px;
+  min-height: 40px;
+  min-width: 10px;
+  word-wrap: nowrap;
+  background: $base-color;
+  color: white;
+  border-radius: 4px;
+  border:none;
+}
+
+#search {
+  flex: 1 1 auto;
+}
+
+.datepicker {
+  flex: 0 1 auto;
+}
+
+// *{
+//   border: solid 1px
+// }
 
 .btn-colored{
   width: 250px;
