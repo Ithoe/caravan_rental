@@ -1,7 +1,9 @@
 .banner {
   background-size: cover;
   background-position: center;
-  // padding: 150px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .banner h1 {
@@ -13,7 +15,7 @@
 }
 
 .banner p {
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
