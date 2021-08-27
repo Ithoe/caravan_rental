@@ -21,15 +21,16 @@
       <% end %>
     <% end %>
   </div>
-
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+  <% if @caravan.photos.count != 1%>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  <% end %>
 </div>
 
 <div class="container">
@@ -42,12 +43,26 @@
     </div>
     <div class="booking-box">
     <h5>Make your booking:</h5>
-      <div class="show-form">
-        <input class="datepicker" id="depart" type="text" placeholder="departure date">
-        <input class="datepicker" id="return" type="text" placeholder="return date">
-        <input class="comment" type="text" placeholder="leaver your comment here">
-        <button class="btn-search" type="button">SUBMIT</button>
-      </div>
+      <%= simple_form_for [@caravan, @booking] do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <div class="form-inputs col-8">
+          <%= f.input :start_date, as: :string, input_html:{class: "datepicker"} %>
+        </div>
+
+        <div class="form-inputs col-8">
+          <%= f.input :end_date, as: :string, input_html:{class: "datepicker"} %>
+        </div>
+
+        <div class="form-inputs col-8">
+          <%= f.input :comment %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
