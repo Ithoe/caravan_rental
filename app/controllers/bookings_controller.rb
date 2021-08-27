@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   def index
     @bookings = policy_scope(Booking)
     @bookings = @bookings.where(user: current_user)
+    @caravan_bookings = current_user.caravan_bookings
   end
 
   def new
@@ -18,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.caravan = @caravan
     authorize @booking
     if @booking.save!
-      redirect_to caravan_bookings_path(@caravan)
+      redirect_to bookings_path
     else
       render :'caravans/show'
     end

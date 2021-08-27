@@ -1,5 +1,8 @@
 require "open-uri"
 
+puts "Removing all bookings..."
+Booking.destroy_all
+
 puts "Removing all caravans..."
 Caravan.destroy_all
 
@@ -15,8 +18,10 @@ puts "Users added..."
 
 puts "Adding caravans..."
 file = URI.open('https://autoline.nl/img/s/caravanAIRSTREAM-604-Yukon---1617016059469960412_common--20051316414417917500.jpg')
+file2 = URI.open('https://img1.camperscaravans.nl/5a803889-70b5-4a8f-9e34-aea4b42df764_750.jpg')
 caravan01 = Caravan.new(name: "Super caravan", description: "Best caravan in the world and for a very good price", built_year: 1984, brand: "Airstream", daily_rate: 20.00, user_id: a.id)
 caravan01.photos.attach(io: file, filename: 'airstream1.jpg', content_type: 'image/jpg')
+caravan01.photos.attach(io: file2, filename: 'airstream2.jpg', content_type: 'image/jpg')
 caravan01.save
 
 file = URI.open('https://autoline.nl/img/s/caravanAIRSTREAM-604-Yukon---1617016063515592747_big--20051316414417917500.jpg')
@@ -90,7 +95,7 @@ caravan15.photos.attach(io: file, filename: 'two_floors_caravan.png', content_ty
 caravan15.save
 
 file = URI.open('https://i.pinimg.com/736x/66/7e/f2/667ef2dbd24a856dc48152099a6d67e5.jpg')
-caravan16 = Caravan.new(name: "This insane caravan has a swimming pool on the roof", description: "This is the perfect caravan for a holiday with kids. You can always keep an eye on them when they go for a swim, since the swimming pool is right on top of your caravan! This is never seen before.", built_year: 2016, brand: "Airstream", daily_rate: 150, user_id: b.id)
+caravan16 = Caravan.new(name: "This insane caravan has a swimming pool on the roof", description: "This is the perfect caravan for a holiday with kids. You can always keep an eye on them when they go for a swim, since the swimming pool is right on top of your caravan! This is never seen before.", built_year: 2016, brand: "Airstream", daily_rate: 150, user_id: c.id)
 caravan16.photos.attach(io: file, filename: 'pool_caravan.jpg', content_type: 'image/jpg')
 caravan16.save
 

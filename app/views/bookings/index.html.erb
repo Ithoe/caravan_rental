@@ -1,0 +1,62 @@
+<div class="container">
+  <h2>Your bookings made</h2>
+  <% if @bookings.count == 0 %>
+    You have not made any bookings yet.
+    <br>
+    <br>
+    <br>
+  <% else %>
+    <% @bookings.each do |booking| %>
+      <div class="card-product">
+        <% if booking.caravan.photos.attached? %>
+          <%= cl_image_tag booking.caravan.photos.first.key %>
+        <% end %>
+        <div class="card-product-infos">
+          <div class="information">
+            <div>
+              <h2><%= link_to "#{booking.caravan.name}", caravan_path(booking.caravan) %></h2>
+              <p>Booked from <%= booking.start_date.strftime("%d-%m-%Y") %> until <%= booking.end_date.strftime("%d-%m-%Y")%> <em>(<%= (booking.end_date - booking.start_date).to_i %> days)</em></p>
+              <p>Daily rate: € <%= number_with_precision(booking.caravan.daily_rate, precision: 2) %></p>
+              <p><em><%= booking.comment %></em></p>
+            </div>
+            <div class="total-price">
+              <h6>Total price: € <%= number_with_precision((booking.end_date - booking.start_date).to_i*booking.caravan.daily_rate, precision: 2) %></h6>
+              <p>Status: <%= booking.status %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+  <br>
+
+  <h2>Your caravans booked</h2>
+  <% if @caravan_bookings.count == 0 %>
+    Your caravan has not been booked yet.
+    <br>
+    <br>
+    <br>
+  <% else %>
+    <% @caravan_bookings.each do |booking| %>
+      <div class="card-product">
+        <% if booking.caravan.photos.attached? %>
+          <%= cl_image_tag booking.caravan.photos.first.key %>
+        <% end %>
+        <div class="card-product-infos">
+          <div class="information">
+            <div>
+              <h2><%= link_to "#{booking.caravan.name}", caravan_path(booking.caravan) %></h2>
+              <p>Booked from <%= booking.start_date.strftime("%d-%m-%Y") %> until <%= booking.end_date.strftime("%d-%m-%Y")%> <em>(<%= (booking.end_date - booking.start_date).to_i %> days)</em></p>
+              <p>Daily rate: € <%= number_with_precision(booking.caravan.daily_rate, precision: 2) %></p>
+              <p><em><%= booking.comment %></em></p>
+            </div>
+            <div class="total-price">
+              <h6>Total price: € <%= number_with_precision((booking.end_date - booking.start_date).to_i*booking.caravan.daily_rate, precision: 2) %></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

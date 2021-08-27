@@ -1,5 +1,5 @@
 class CaravansController < ApplicationController
-skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @caravans = Caravan.all
     @caravans = policy_scope(Caravan)
