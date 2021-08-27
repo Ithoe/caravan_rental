@@ -3,7 +3,13 @@
     <h1>Rent your caravan today!</h1>
     <p>And enjoy your holiday with maximum freedom</p>
 
-  <%= form_tag caravans_path, class: "inner-form", method: :get do %>
+
+
+    <div class= "main-form">
+      <br>
+      <br>
+      <div class="title">FIND YOUR HOLIDAY RIDE</div>
+      <%= form_tag caravans_path, class: "inner-form", method: :get do %>
           <%= text_field_tag :query,
               params[:query],
               id: "search",
@@ -12,26 +18,7 @@
             <input class="datepicker" id="depart" type="text" placeholder="departure date">
             <input class="datepicker" id="return" type="text" placeholder="return date">
             <%= submit_tag "SEARCH", class: "btn-search" %>
-          <%end%>
-
-    <div class= "main-form">
-      <br>
-      <br>
-      <div class="title">FIND YOUR HOLIDAY RIDE</div>
-      <div class="inner-form">
-        <%# <div class="input-field first-wrap"> %>
-          <input id="search" type="text" placeholder="what are you looking for?">
-        <%# </div> %>
-        <%# <div class="input-field second-wrap"> %>
-          <input class="datepicker" id="depart" type="text" placeholder="departure date">
-        <%# </div> %>
-        <%# <div class="input-field third-wrap"> %>
-          <input class="datepicker" id="return" type="text" placeholder="return date">
-        <%# </div> %>
-        <%# <div class="input-field fifth-wrap"> %>
-          <button class="btn-search" type="button">SEARCH</button>
-        <%# </div> %>
-      </div>
+        s<%end%>
     </div>
     </div>
 </div>
