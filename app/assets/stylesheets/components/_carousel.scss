@@ -2,6 +2,6 @@
   height: 60vh;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  background-color: black;
+.carousel-control-next, .carousel-control-prev {
+  filter: invert(100%);
 }

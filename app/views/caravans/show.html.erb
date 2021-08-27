@@ -36,37 +36,36 @@
 <div class="container">
   <div class="form-box">
     <div class="description-box">
-      <h1> <%= @caravan.name %> </h1>
-      <h4> <%= @caravan.description %> </h4>
-      <p>Built year: <%= @caravan.built_year %></p>
-      <p>Daily rate: € <%= number_with_precision(@caravan.daily_rate, precision: 2) %></p>
+      <h1 class="caravanname"> <%= @caravan.name %> </h1>
+      <div class="rightside">
+        <p id="price">€ <%= number_with_precision(@caravan.daily_rate, precision: 2) %> per day</p>
+        <p id="year">Built in <%= @caravan.built_year %></p>
+      </div>
+      <h4 class="description"> <%= @caravan.description %> </h4>
     </div>
-    <div class="booking-box">
+
+  <div class="booking-box">
     <h5>Make your booking:</h5>
-      <%= simple_form_for [@caravan, @booking] do |f| %>
-        <%= f.error_notification %>
-        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-        <div class="form-inputs col-8">
-          <%= f.input :start_date, as: :string, input_html:{class: "datepicker"} %>
-        </div>
-
-        <div class="form-inputs col-8">
-          <%= f.input :end_date, as: :string, input_html:{class: "datepicker"} %>
-        </div>
-
-        <div class="form-inputs col-8">
-          <%= f.input :comment %>
-        </div>
-
-        <div class="form-actions">
-          <%= f.button :submit %>
-        </div>
-      <% end %>
+    <%= simple_form_for [@caravan, @booking] do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <div class="form-inputs">
+        <%= f.input :start_date, as: :string, input_html:{class: "datepicker"} %>
+      </div>
+      <div class="form-inputs">
+        <%= f.input :end_date, as: :string, input_html:{class: "datepicker"} %>
+      </div>
+      <div class="form-inputs">
+        <%= f.input :comment %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <h3 class="btn"><%= link_to "See all caravans", caravans_path %></h3>
+<div class="container-button mb-5">
+  <%= link_to "SEE ALL CARAVANS", caravans_path, class: "btn-back" %>
 </div>
