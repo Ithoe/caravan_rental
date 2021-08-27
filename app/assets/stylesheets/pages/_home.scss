@@ -165,7 +165,6 @@
   font-weight: 400;
 }
 
-
 input {
   padding: 8px;
   margin: 0 4px 0 0;
@@ -177,8 +176,8 @@ input {
 .btn-search {
   flex: 0 1 auto;
   padding: 0px 16px;
-  min-height: 40px;
-  min-width: 10px;
+  height: 40px;
+  width: 100%;
   word-wrap: nowrap;
   background: $base-color;
   color: white;

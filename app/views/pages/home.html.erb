@@ -3,24 +3,22 @@
     <h1>Rent your caravan today!</h1>
     <p>And enjoy your holiday with maximum freedom</p>
 
+
+
     <div class= "main-form">
       <br>
       <br>
       <div class="title">FIND YOUR HOLIDAY RIDE</div>
-      <div class="inner-form">
-        <%# <div class="input-field first-wrap"> %>
-          <input id="search" type="text" placeholder="what are you looking for?">
-        <%# </div> %>
-        <%# <div class="input-field second-wrap"> %>
-          <input class="datepicker" id="depart" type="text" placeholder="departure date">
-        <%# </div> %>
-        <%# <div class="input-field third-wrap"> %>
-          <input class="datepicker" id="return" type="text" placeholder="return date">
-        <%# </div> %>
-        <%# <div class="input-field fifth-wrap"> %>
-          <button class="btn-search" type="button">SEARCH</button>
-        <%# </div> %>
-      </div>
+      <%= form_tag caravans_path, class: "inner-form", method: :get do %>
+          <%= text_field_tag :query,
+              params[:query],
+              id: "search",
+              placeholder: "what are you looking for?"
+            %>
+            <input class="datepicker" id="depart" type="text" placeholder="departure date">
+            <input class="datepicker" id="return" type="text" placeholder="return date">
+            <%= submit_tag "SEARCH", class: "btn-search" %>
+        <%end%>
     </div>
     </div>
 </div>
@@ -32,7 +30,7 @@
       <br>
       <%= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." %>
     </div>
-    <%= link_to "SEE ALL AVAILABLE CARAVANS", caravans_path, class: "btn-colored" %>
+    <%= link_to "SEE CARAVANS", caravans_path, class: "btn-colored" %>
   </div>
 </div>
 
@@ -65,6 +63,6 @@
       <br>
       <%= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." %>
     </div>
-    <%= link_to "ADD YOUR CARAVAN TODAY", new_caravan_path, class:"btn-colored" %>
+    <%= link_to "ADD CARAVAN", new_caravan_path, class:"btn-colored" %>
   </div>
 </div>
