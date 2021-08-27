@@ -2,3 +2,9 @@
 @import "home";
 @import "new";
 @import "show";
+
+.filter{
+  display:flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}

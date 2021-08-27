@@ -1,4 +1,32 @@
 <div class="container">
+<form class="filter">
+  <div class="left-filters">
+    <div class="search-container">
+      <input type="text" class="search" <%= text_field_tag :name_query,
+              params[:name_query],
+              class: "form-control mr-sm-2",
+              placeholder: "Name"
+            %>>
+      <input type="text" class="search" <%= text_field_tag :description_query,
+              params[:description_query],
+              class: "form-control mr-sm-2",
+              placeholder: "Description"
+            %>>
+      <input type="text" class="search" <%= text_field_tag :built_year_query,
+              params[:built_year_query],
+              class: "form-control mr-sm-2",
+              placeholder: "Built in:"
+            %>>
+      <input class="datepicker" id="depart" type="text" placeholder="departure date">
+      <input class="datepicker" id="return" type="text" placeholder="return date">
+    </div>
+  </div>
+  <div class="right-filter">
+    <button type="submit" class="btn-search">Search</button>
+  </div>
+</form>
+</div>
+<div class="container">
   <div class="cards">
     <% @caravans.each do |caravan| %>
       <div class="card-caravan">
