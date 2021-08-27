@@ -13,20 +13,91 @@
 }
 
 .description-box{
-  width: 80%;
-  padding: 20px;
+  width: 60%;
+  // padding: 20px;
 }
 
 .booking-box{
   width: 30%;
   padding: 20px;
   background-color: $highlight-color;
+  border-radius: 4px;
 }
 
-*{
-  border: solid 1px;
+#booking_end_date, #booking_start_date{
+  background-color: white;
 }
 
-.carousel-control-next, .carousel-control-prev {
-  filter: invert(100%);
+.form-actions .btn{
+  margin: 0 auto;
+  display:block;
 }
+
+.form-actions .btn:hover{
+  background-color: transparent;
+  color: $base-color;
+  text-decoration: none;
+  border: solid 2px $base-color;
+}
+
+
+.btn-back {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 0 auto;
+  align-items: center;
+  padding: 0px 16px;
+  height: 40px;
+  width: 300px;
+  word-wrap: nowrap;
+  background: $base-color;
+  color: white;
+  border-radius: 4px;
+  border: solid 2px $base-color;
+}
+
+.btn-back:hover{
+  background-color: transparent;
+  color: $base-color;
+  text-decoration: none;
+}
+
+.container-button{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.rightside{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.caravanname{
+  font-size: 30px;
+  padding: 10px;
+  background-color: $highlight-color;
+  border-radius: 4px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.description{
+  font-size: 16px;
+  border-top: 2px solid $highlight-color;
+  padding: 20px 0px;
+}
+#price{
+  margin-top: 20px;
+  font-size: 20px;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+#year{
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+// *{
+//   border: solid 1px;
+// }
