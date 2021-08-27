@@ -1,3 +1,23 @@
+ <form>
+    <div class="search-container">
+      <input type="text" class="search" placeholder="Location">
+      <input type="text" class="date-from" placeholder="Check In > Check Out">
+      <input type="text" class="date-to" placeholder="Number of people">
+      <button type="submit" class="button">Search</button>
+    </div>
+</form>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <%= form_tag caravans_path, class: "form-inline my-2 my-lg-0", id: "formNavbar", method: :get do %>
+          <%= text_field_tag :query,
+              params[:query],
+              class: "form-control mr-sm-2",
+              placeholder: "Find a caravan"
+            %>
+          <%= submit_tag "Search", class: "btn btn-outline-light my-2 my-sm-0", id: "buttonsearch" %>
+          <%end%>
+
 <div class="container">
   <div class="cards">
     <% @caravans.each do |caravan| %>

@@ -1,11 +1,24 @@
 class CaravansController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
   def index
+    @caravans = Caravan.all
+    @caravans = policy_scope(Caravan)
+
     if params[:query].present?
       sql_query = "name ILIKE :query OR description ILIKE :query"
       @caravans = policy_scope(Caravan.where(sql_query, query: "%#{params[:query]}%"))
-    else
-      @caravans = policy_scope(Caravan)
+    end
+
+    if params[:name_query].present?
+      @caravans = @caravans.search_by_name(params[:name_query])
+    end
+
+    if params[:description_query].present?
+      @caravans = @caravans.search_by_description(params[:description_query])
+    end
+
+     if params[:brand_query].present?
+      @caravans = @caravans.search_by_brand(params[:brand_query])
     end
   end
 
