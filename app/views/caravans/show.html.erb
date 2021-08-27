@@ -4,7 +4,8 @@
   </div>
 </div>
 -->
-
+<br>
+<br>
 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
@@ -31,31 +32,26 @@
   </a>
 </div>
 
-
-<div class="container my-5">
-  <h1> <%= @caravan.name %> </h1>
-  <h4> <%= @caravan.description %> </h4>
-  <p>Built year: <%= @caravan.built_year %></p>
-  <p>Daily rate: € <%= number_with_precision(@caravan.daily_rate, precision: 2) %></p>
-
-  <h3 class="btn"><%= link_to "See all caravans", caravans_path %></h3>
+<div class="container">
+  <div class="form-box">
+    <div class="description-box">
+      <h1> <%= @caravan.name %> </h1>
+      <h4> <%= @caravan.description %> </h4>
+      <p>Built year: <%= @caravan.built_year %></p>
+      <p>Daily rate: € <%= number_with_precision(@caravan.daily_rate, precision: 2) %></p>
+    </div>
+    <div class="booking-box">
+    <h5>Make your booking:</h5>
+      <div class="show-form">
+        <input class="datepicker" id="depart" type="text" placeholder="departure date">
+        <input class="datepicker" id="return" type="text" placeholder="return date">
+        <input class="comment" type="text" placeholder="leaver your comment here">
+        <button class="btn-search" type="button">SUBMIT</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-
-<%= simple_form_for [@caravan, @booking] do |f| %>
-    <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-    <div class="form-inputs col-8">
-      <%= f.input :start_date %>
-    </div>
-    <div class="form-inputs col-8">
-      <%= f.input :end_date %>
-    </div>
-    <div class="form-inputs col-8">
-      <%= f.input :comment %>
-    </div>
-    <div class="form-actions">
-      <%= f.button :submit %>
-    </div>
-<% end %>
+<div class="container">
+  <h3 class="btn"><%= link_to "See all caravans", caravans_path %></h3>
+</div>

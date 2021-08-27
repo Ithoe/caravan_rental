@@ -59,4 +59,44 @@ caravan09 = Caravan.new(name: "If you want to have a weekend on your own", descr
 caravan09.photos.attach(io: file, filename: 'small_caravan.jpg', content_type: 'image/jpg')
 caravan09.save
 
+file = URI.open('https://www.caravanity.nl/wp-content/uploads/2014/07/kolonivan-01.jpg')
+caravan10 = Caravan.new(name: "The caravan that looks like an egg", description: "It is a very well designed caravan, with all features that you will need", built_year: 2014, brand: "Egg", daily_rate: 45, user_id: b.id)
+caravan10.photos.attach(io: file, filename: 'egg.jpg', content_type: 'image/jpg')
+caravan10.save
+
+file = URI.open('https://www.gewoonvoorhem.nl/app/uploads/fly-images/78186/Romotow-Caravan-Concept-1000x750-c.jpg')
+caravan11 = Caravan.new(name: "The most futuristic caravan ever", description: "If you want all eyes on you on the campsite, you have to rent this caravan. It looks like it comes from the future.", built_year: 2021, brand: "Airstream", daily_rate: 75, user_id: a.id)
+caravan11.photos.attach(io: file, filename: 'future_caravan.jpg', content_type: 'image/jpg')
+caravan11.save
+
+file = URI.open('https://media.indebuurt.nl/nijmegen/2018/07/06025458/caravanvoordedeur-e1531812133364.jpg')
+caravan12 = Caravan.new(name: "Simple caravan with lots of light", description: "A well lit caravan for rent", built_year: 2001, brand: "UK build", daily_rate: 39.50, user_id: a.id)
+caravan12.photos.attach(io: file, filename: 'lots_of_light_caravan.jpg', content_type: 'image/jpg')
+caravan12.save
+
+file = URI.open('https://man-man.nl/app/uploads/fly-images/174939/zilver-caravan-e1619699145151-1200x545-c.jpg')
+caravan13 = Caravan.new(name: "Rent this extendable caravan for a great holiday", description: "This caravan is extendable. This means that would will drive with a small caravan, but still can camp in a big caravan.", built_year: 2008, brand: "Kip", daily_rate: 78, user_id: b.id)
+caravan13.photos.attach(io: file, filename: 'extendable_caravan.jpg', content_type: 'image/jpg')
+caravan13.save
+
+file = URI.open('https://www.dejongrecreatie.nl/media/21802/2021-ww-prestige-hero.jpg')
+caravan14 = Caravan.new(name: "You can go on holiday during winter with this caravan", description: "This caravan is perfect for a holiday in winter. It has extra heating to keep warm and a extra big hot water tank", built_year: 2001, brand: "Airstream", daily_rate: 62, user_id: c.id)
+caravan14.photos.attach(io: file, filename: 'winter_caravan.jpg', content_type: 'image/jpg')
+caravan14.save
+
+file = URI.open('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/saix-maxus-van-1-1614014327.png')
+caravan15 = Caravan.new(name: "This caravan has 2 floors, perfect for a family", description: "This caravan has enough space for an entire family, since it has 2 floors. This is really something else!", built_year: 2009, brand: "UK build", daily_rate: 39.95, user_id: c.id)
+caravan15.photos.attach(io: file, filename: 'two_floors_caravan.png', content_type: 'image/png')
+caravan15.save
+
+file = URI.open('https://i.pinimg.com/736x/66/7e/f2/667ef2dbd24a856dc48152099a6d67e5.jpg')
+caravan16 = Caravan.new(name: "This insane caravan has a swimming pool on the roof", description: "This is the perfect caravan for a holiday with kids. You can always keep an eye on them when they go for a swim, since the swimming pool is right on top of your caravan! This is never seen before.", built_year: 2016, brand: "Airstream", daily_rate: 150, user_id: b.id)
+caravan16.photos.attach(io: file, filename: 'pool_caravan.jpg', content_type: 'image/jpg')
+caravan16.save
+
+file = URI.open('http://up.picr.de/24964600fy.jpg')
+caravan17 = Caravan.new(name: "This caravan can create some extra living space", description: "You can slide out the side, which will create some extra space for an extra large dinner table", built_year: 2001, brand: "Kip", daily_rate: 111, user_id: a.id)
+caravan17.photos.attach(io: file, filename: 'slide_caravan.jpg', content_type: 'image/jpg')
+caravan17.save
+
 puts "Caravans added!"
