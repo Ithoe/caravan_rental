@@ -17,8 +17,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
       @caravans = @caravans.search_by_description(params[:description_query])
     end
 
-     if params[:brand_query].present?
-      @caravans = @caravans.search_by_brand(params[:brand_query])
+    if params[:built_year_query].present?
+      @caravans = @caravans.search_by_built_year(params[:built_year_query])
     end
   end
 

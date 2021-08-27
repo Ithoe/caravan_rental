@@ -1,23 +1,31 @@
- <form>
+<div class="container">
+<form class="filter">
+  <div class="left-filters">
     <div class="search-container">
-      <input type="text" class="search" placeholder="Location">
-      <input type="text" class="date-from" placeholder="Check In > Check Out">
-      <input type="text" class="date-to" placeholder="Number of people">
-      <button type="submit" class="button">Search</button>
-    </div>
-</form>
-
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-          <%= form_tag caravans_path, class: "form-inline my-2 my-lg-0", id: "formNavbar", method: :get do %>
-          <%= text_field_tag :query,
-              params[:query],
+      <input type="text" class="search" <%= text_field_tag :name_query,
+              params[:name_query],
               class: "form-control mr-sm-2",
-              placeholder: "Find a caravan"
-            %>
-          <%= submit_tag "Search", class: "btn btn-outline-light my-2 my-sm-0", id: "buttonsearch" %>
-          <%end%>
-
+              placeholder: "Name"
+            %>>
+      <input type="text" class="search" <%= text_field_tag :description_query,
+              params[:description_query],
+              class: "form-control mr-sm-2",
+              placeholder: "Description"
+            %>>
+      <input type="text" class="search" <%= text_field_tag :built_year_query,
+              params[:built_year_query],
+              class: "form-control mr-sm-2",
+              placeholder: "Built in:"
+            %>>
+      <input class="datepicker" id="depart" type="text" placeholder="departure date">
+      <input class="datepicker" id="return" type="text" placeholder="return date">
+    </div>
+  </div>
+  <div class="right-filter">
+    <button type="submit" class="btn-search">Search</button>
+  </div>
+</form>
+</div>
 <div class="container">
   <div class="cards">
     <% @caravans.each do |caravan| %>

@@ -6,36 +6,21 @@ class Caravan < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_name,
-  against: [ :name, :description, :brand ],
+  against: [ :name ],
   using: {
     tsearch: { prefix: true }
   }
 
-  include PgSearch::Model
   pg_search_scope :search_by_description,
-  against: [ :name, :description, :brand ],
+  against: [:description ],
   using: {
     tsearch: { prefix: true }
   }
 
-  include PgSearch::Model
-  pg_search_scope :search_by_brand,
-  against: [ :name, :description, :brand ],
-  using: {
-    tsearch: { prefix: true }
-  }
-
-  include PgSearch::Model
-  pg_search_scope :search_by_daily_rate,
-  against: [ :daily_rate],
-  using: {
-    tsearch: { prefix: true }
-  }
-
-  include PgSearch::Model
   pg_search_scope :search_by_built_year,
-  against: [ :built_year],
+  against: [:built_year ],
   using: {
     tsearch: { prefix: true }
   }
+
 end
