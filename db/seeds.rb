@@ -95,8 +95,12 @@ caravan15.photos.attach(io: file, filename: 'two_floors_caravan.png', content_ty
 caravan15.save
 
 file = URI.open('https://i.pinimg.com/736x/66/7e/f2/667ef2dbd24a856dc48152099a6d67e5.jpg')
+file02 = URI.open('https://static.designboom.com/wp-content/uploads/2018/06/benedetto-bufalino-pool-caravan-designboom-818.jpg')
+file03 = URI.open('https://www.toxel.com/wp-content/uploads/2018/06/caravanpool01.jpg')
 caravan16 = Caravan.new(name: "This insane caravan has a swimming pool on the roof", description: "This is the perfect caravan for a holiday with kids. You can always keep an eye on them when they go for a swim, since the swimming pool is right on top of your caravan! This is never seen before.", built_year: 2016, brand: "Airstream", daily_rate: 150, user_id: c.id)
 caravan16.photos.attach(io: file, filename: 'pool_caravan.jpg', content_type: 'image/jpg')
+caravan16.photos.attach(io: file02, filename: 'pool_caravan.jpg', content_type: 'image/jpg')
+caravan16.photos.attach(io: file03, filename: 'pool_caravan.jpg', content_type: 'image/jpg')
 caravan16.save
 
 file = URI.open('http://up.picr.de/24964600fy.jpg')
